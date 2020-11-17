@@ -3,19 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8574DB2251D02CF001ED082 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A8574DB1251D02CF001ED082 /* GoogleService-Info.plist */; };
+		A8574E1B25210D8B001ED082 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8574E1825210D8B001ED082 /* LoginViewController.swift */; };
+		A8574E1C25210D8B001ED082 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8574E1925210D8B001ED082 /* ResetPasswordViewController.swift */; };
+		A8574E1D25210D8B001ED082 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8574E1A25210D8B001ED082 /* SignUpViewController.swift */; };
+		A85C83182556222000A41762 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A85C83162556222000A41762 /* Model.xcdatamodeld */; };
 		A8DEDFC2251BC2AC00AB5572 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DEDFC1251BC2AC00AB5572 /* AppDelegate.swift */; };
 		A8DEDFC4251BC2AC00AB5572 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DEDFC3251BC2AC00AB5572 /* SceneDelegate.swift */; };
 		A8DEDFC6251BC2AC00AB5572 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DEDFC5251BC2AC00AB5572 /* ViewController.swift */; };
 		A8DEDFC9251BC2AC00AB5572 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8DEDFC7251BC2AC00AB5572 /* Main.storyboard */; };
 		A8DEDFCB251BC2AD00AB5572 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8DEDFCA251BC2AD00AB5572 /* Assets.xcassets */; };
 		A8DEDFCE251BC2AD00AB5572 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8DEDFCC251BC2AD00AB5572 /* LaunchScreen.storyboard */; };
+		A8DEDFD6251BC53100AB5572 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DEDFD5251BC53100AB5572 /* NoteViewController.swift */; };
+		A8DEDFD8251BC55300AB5572 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DEDFD7251BC55300AB5572 /* EntryViewController.swift */; };
+		F310F53C618D8B6A5AE65F09 /* Pods_Private_Notes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 471765AF80B2BC828D4F4001 /* Pods_Private_Notes.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		471765AF80B2BC828D4F4001 /* Pods_Private_Notes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Private_Notes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8574DB1251D02CF001ED082 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A8574E1825210D8B001ED082 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "/Users/kv/Desktop/Private Notes/Private Notes/LoginViewController.swift"; sourceTree = "<absolute>"; };
+		A8574E1925210D8B001ED082 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		A8574E1A25210D8B001ED082 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		A85C83172556222000A41762 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		A8DEDFBE251BC2AC00AB5572 /* Private Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Private Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8DEDFC1251BC2AC00AB5572 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8DEDFC3251BC2AC00AB5572 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +38,10 @@
 		A8DEDFCA251BC2AD00AB5572 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8DEDFCD251BC2AD00AB5572 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8DEDFCF251BC2AD00AB5572 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8DEDFD5251BC53100AB5572 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		A8DEDFD7251BC55300AB5572 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		CBB8470E05EBFC272C8C6B50 /* Pods-Private Notes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Private Notes.release.xcconfig"; path = "Target Support Files/Pods-Private Notes/Pods-Private Notes.release.xcconfig"; sourceTree = "<group>"; };
+		FE77487D0A826A90A81E4E3C /* Pods-Private Notes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Private Notes.debug.xcconfig"; path = "Target Support Files/Pods-Private Notes/Pods-Private Notes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +49,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F310F53C618D8B6A5AE65F09 /* Pods_Private_Notes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3481D70B6785DE7529B359A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FE77487D0A826A90A81E4E3C /* Pods-Private Notes.debug.xcconfig */,
+				CBB8470E05EBFC272C8C6B50 /* Pods-Private Notes.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		38943A4BB72E28254C550955 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				471765AF80B2BC828D4F4001 /* Pods_Private_Notes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8574DE3251D5F2E001ED082 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A8DEDFCC251BC2AD00AB5572 /* LaunchScreen.storyboard */,
+				A8DEDFC7251BC2AC00AB5572 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		A8DEDFB5251BC2AC00AB5572 = {
 			isa = PBXGroup;
 			children = (
 				A8DEDFC0251BC2AC00AB5572 /* Private Notes */,
 				A8DEDFBF251BC2AC00AB5572 /* Products */,
+				3481D70B6785DE7529B359A3 /* Pods */,
+				38943A4BB72E28254C550955 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,13 +103,19 @@
 		A8DEDFC0251BC2AC00AB5572 /* Private Notes */ = {
 			isa = PBXGroup;
 			children = (
+				A8574DE3251D5F2E001ED082 /* Storyboards */,
 				A8DEDFC1251BC2AC00AB5572 /* AppDelegate.swift */,
 				A8DEDFC3251BC2AC00AB5572 /* SceneDelegate.swift */,
 				A8DEDFC5251BC2AC00AB5572 /* ViewController.swift */,
-				A8DEDFC7251BC2AC00AB5572 /* Main.storyboard */,
 				A8DEDFCA251BC2AD00AB5572 /* Assets.xcassets */,
-				A8DEDFCC251BC2AD00AB5572 /* LaunchScreen.storyboard */,
+				A8574DB1251D02CF001ED082 /* GoogleService-Info.plist */,
 				A8DEDFCF251BC2AD00AB5572 /* Info.plist */,
+				A8DEDFD5251BC53100AB5572 /* NoteViewController.swift */,
+				A8DEDFD7251BC55300AB5572 /* EntryViewController.swift */,
+				A8574E1825210D8B001ED082 /* LoginViewController.swift */,
+				A8574E1925210D8B001ED082 /* ResetPasswordViewController.swift */,
+				A85C83162556222000A41762 /* Model.xcdatamodeld */,
+				A8574E1A25210D8B001ED082 /* SignUpViewController.swift */,
 			);
 			path = "Private Notes";
 			sourceTree = "<group>";
@@ -74,9 +127,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8DEDFD2251BC2AD00AB5572 /* Build configuration list for PBXNativeTarget "Private Notes" */;
 			buildPhases = (
+				658C864FA70316D6933816F6 /* [CP] Check Pods Manifest.lock */,
 				A8DEDFBA251BC2AC00AB5572 /* Sources */,
 				A8DEDFBB251BC2AC00AB5572 /* Frameworks */,
 				A8DEDFBC251BC2AC00AB5572 /* Resources */,
+				07C32CED7DC81073301B1C7B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8DEDFCE251BC2AD00AB5572 /* LaunchScreen.storyboard in Resources */,
+				A8574DB2251D02CF001ED082 /* GoogleService-Info.plist in Resources */,
 				A8DEDFCB251BC2AD00AB5572 /* Assets.xcassets in Resources */,
 				A8DEDFC9251BC2AC00AB5572 /* Main.storyboard in Resources */,
 			);
@@ -133,14 +189,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		07C32CED7DC81073301B1C7B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Private Notes/Pods-Private Notes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Private Notes/Pods-Private Notes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Private Notes/Pods-Private Notes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		658C864FA70316D6933816F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Private Notes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A8DEDFBA251BC2AC00AB5572 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8574E1B25210D8B001ED082 /* LoginViewController.swift in Sources */,
+				A8DEDFD6251BC53100AB5572 /* NoteViewController.swift in Sources */,
+				A8574E1D25210D8B001ED082 /* SignUpViewController.swift in Sources */,
+				A8DEDFD8251BC55300AB5572 /* EntryViewController.swift in Sources */,
 				A8DEDFC6251BC2AC00AB5572 /* ViewController.swift in Sources */,
+				A85C83182556222000A41762 /* Model.xcdatamodeld in Sources */,
 				A8DEDFC2251BC2AC00AB5572 /* AppDelegate.swift in Sources */,
 				A8DEDFC4251BC2AC00AB5572 /* SceneDelegate.swift in Sources */,
+				A8574E1C25210D8B001ED082 /* ResetPasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,10 +386,13 @@
 		};
 		A8DEDFD3251BC2AD00AB5572 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE77487D0A826A90A81E4E3C /* Pods-Private Notes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75MM43Y9A2;
 				INFOPLIST_FILE = "Private Notes/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -293,16 +400,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.KennethMcDonald.Private-Notes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		A8DEDFD4251BC2AD00AB5572 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBB8470E05EBFC272C8C6B50 /* Pods-Private Notes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75MM43Y9A2;
 				INFOPLIST_FILE = "Private Notes/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +420,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.KennethMcDonald.Private-Notes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -336,6 +446,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A85C83162556222000A41762 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A85C83172556222000A41762 /* Model.xcdatamodel */,
+			);
+			currentVersion = A85C83172556222000A41762 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A8DEDFB6251BC2AC00AB5572 /* Project object */;
 }
