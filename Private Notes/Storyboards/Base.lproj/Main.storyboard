@@ -92,16 +92,6 @@
                                     </connections>
                                 </button>
                             </barButtonItem>
-                            <barButtonItem style="plain" id="ei1-pI-bgj">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="efq-9n-BPJ">
-                                    <rect key="frame" x="110" y="7" width="92" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Date"/>
-                                    <connections>
-                                        <action selector="sortDate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YDB-Vp-duS"/>
-                                    </connections>
-                                </button>
-                            </barButtonItem>
                             <barButtonItem title="Sort" style="plain" id="c4H-V3-hHE">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Z4C-wp-Otl">
                                     <rect key="frame" x="18" y="7" width="92" height="30"/>

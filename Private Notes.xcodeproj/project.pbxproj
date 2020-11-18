@@ -12,7 +12,6 @@
 		A8574E1C25210D8B001ED082 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8574E1925210D8B001ED082 /* ResetPasswordViewController.swift */; };
 		A8574E1D25210D8B001ED082 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8574E1A25210D8B001ED082 /* SignUpViewController.swift */; };
 		A85C83182556222000A41762 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A85C83162556222000A41762 /* Model.xcdatamodeld */; };
-		A88CD2C02565A0D700F54486 /* LoggedOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88CD2BF2565A0D600F54486 /* LoggedOutViewController.swift */; };
 		A8DEDFC2251BC2AC00AB5572 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DEDFC1251BC2AC00AB5572 /* AppDelegate.swift */; };
 		A8DEDFC4251BC2AC00AB5572 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DEDFC3251BC2AC00AB5572 /* SceneDelegate.swift */; };
 		A8DEDFC6251BC2AC00AB5572 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DEDFC5251BC2AC00AB5572 /* ViewController.swift */; };
@@ -31,7 +30,6 @@
 		A8574E1925210D8B001ED082 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		A8574E1A25210D8B001ED082 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A85C83172556222000A41762 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		A88CD2BF2565A0D600F54486 /* LoggedOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutViewController.swift; sourceTree = "<group>"; };
 		A8DEDFBE251BC2AC00AB5572 /* Private Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Private Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8DEDFC1251BC2AC00AB5572 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8DEDFC3251BC2AC00AB5572 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 				A8574E1925210D8B001ED082 /* ResetPasswordViewController.swift */,
 				A85C83162556222000A41762 /* Model.xcdatamodeld */,
 				A8574E1A25210D8B001ED082 /* SignUpViewController.swift */,
-				A88CD2BF2565A0D600F54486 /* LoggedOutViewController.swift */,
 			);
 			path = "Private Notes";
 			sourceTree = "<group>";
@@ -248,7 +245,6 @@
 				A8DEDFC2251BC2AC00AB5572 /* AppDelegate.swift in Sources */,
 				A8DEDFC4251BC2AC00AB5572 /* SceneDelegate.swift in Sources */,
 				A8574E1C25210D8B001ED082 /* ResetPasswordViewController.swift in Sources */,
-				A88CD2C02565A0D700F54486 /* LoggedOutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
