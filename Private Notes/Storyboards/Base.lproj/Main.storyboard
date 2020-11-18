@@ -66,15 +66,59 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Notes" id="1Cg-gt-S2d">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5Ea-gA-j4x">
-                            <connections>
-                                <action selector="didTapNewNote" destination="BYZ-38-t0r" id="tI2-ih-hyk"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="5Ea-gA-j4x">
+                                <connections>
+                                    <action selector="didTapNewNote" destination="BYZ-38-t0r" id="tI2-ih-hyk"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="iBw-rn-NWk">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="N8s-Ul-16V">
+                                    <rect key="frame" x="294" y="7" width="89" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Sign Out"/>
+                                    <connections>
+                                        <action selector="logOutActionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Xv-SF-LdR"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="L7N-4t-bSG">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="AQx-E4-giu">
+                                    <rect key="frame" x="202" y="7" width="92" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Edit"/>
+                                    <connections>
+                                        <action selector="edit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4lC-UM-LLz"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="ei1-pI-bgj">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="efq-9n-BPJ">
+                                    <rect key="frame" x="110" y="7" width="92" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Date"/>
+                                    <connections>
+                                        <action selector="sortDate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YDB-Vp-duS"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem title="Sort" style="plain" id="c4H-V3-hHE">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Z4C-wp-Otl">
+                                    <rect key="frame" x="18" y="7" width="92" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Sort"/>
+                                    <connections>
+                                        <action selector="sortAlpha:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QpF-ls-kCU"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="editButton" destination="L7N-4t-bSG" id="Sjq-qy-6WT"/>
                         <outlet property="label" destination="RlC-OV-RnY" id="UMr-8N-uM5"/>
                         <outlet property="table" destination="bep-dp-2yc" id="o3X-vs-ABc"/>
+                        <segue destination="gce-JH-osb" kind="presentation" identifier="Logout" modalPresentationStyle="fullScreen" id="yao-C6-hPl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -194,17 +238,17 @@
         <!--Login View Controller-->
         <scene sceneID="3vT-BE-mO0">
             <objects>
-                <viewController id="gce-JH-osb" customClass="LoginViewController" customModule="Private_Notes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gce-JH-osb" customClass="LoginViewController" customModule="Private_Notes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vLH-iE-3ep"/>
                         <viewControllerLayoutGuide type="bottom" id="dzp-ZH-ayk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1oF-WV-O10">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRY-eb-A1l">
-                                <rect key="frame" x="180" y="628" width="54" height="30"/>
+                                <rect key="frame" x="180" y="648" width="54" height="30"/>
                                 <color key="backgroundColor" red="0.2470588235" green="0.67450980390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -214,17 +258,17 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RM8-0S-8GV">
-                                <rect key="frame" x="91" y="341" width="232" height="34"/>
+                                <rect key="frame" x="91" y="351" width="232" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5dg-o5-0W0">
-                                <rect key="frame" x="91" y="383" width="232" height="34"/>
+                                <rect key="frame" x="91" y="393" width="232" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08Y-Px-nyY">
-                                <rect key="frame" x="182.66666666666666" y="425" width="49" height="36"/>
+                                <rect key="frame" x="182.66666666666666" y="435" width="49" height="36"/>
                                 <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Login">
@@ -236,7 +280,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TO9-IQ-5av">
-                                <rect key="frame" x="153" y="666" width="109" height="30"/>
+                                <rect key="frame" x="153" y="686" width="109" height="30"/>
                                 <state key="normal" title="Reset Password">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -253,7 +297,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="e95-Me-YIc"/>
-                        <color key="backgroundColor" systemColor="separatorColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="TO9-IQ-5av" secondAttribute="bottom" constant="20" symbolic="YES" id="16C-IG-054"/>
                             <constraint firstItem="RM8-0S-8GV" firstAttribute="leading" secondItem="5dg-o5-0W0" secondAttribute="leading" id="4jz-fN-eAh"/>
@@ -457,17 +501,17 @@
     <inferredMetricsTieBreakers>
         <segue reference="OJ5-6G-bkx"/>
         <segue reference="lk3-qT-S0O"/>
-        <segue reference="b4v-X7-Aj9"/>
+        <segue reference="yao-C6-hPl"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
