@@ -18,6 +18,8 @@ class EntryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.noteField.layer.borderColor = UIColor.lightGray.cgColor
+        self.noteField.layer.borderWidth = 1
         titleField.becomeFirstResponder()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(didTapSave))
     }

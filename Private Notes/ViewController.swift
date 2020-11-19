@@ -37,6 +37,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         ref = Database.database().reference()
         startObservingDatabase()
         
+        self.label.isHidden = true
+        self.table.isHidden = false
+        
     }
     
     
@@ -139,6 +142,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.table.reloadData()
     }
     
+    @IBAction func sortCategory(_ sender: Any)
+    {
+        self.notes.sort { $0.category < $1.category }
+        self.table.reloadData()
+    }
+    
     @IBAction func edit(_ sender: Any)
     {
         table.isEditing = !table.isEditing
@@ -162,9 +171,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return
         }
         vc.navigationItem.largeTitleDisplayMode = .never
-        vc.title = "Note"
-        vc.noteTitle = model.title
+        vc.title = model.title
+        vc.date = model.date
         vc.note = model.note
+        vc.noteCategory = model.category
         navigationController?.pushViewController(vc, animated: true)
     }
     

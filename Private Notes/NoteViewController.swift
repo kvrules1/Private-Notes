@@ -10,16 +10,24 @@ import UIKit
 
 class NoteViewController: UIViewController {
 
-    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
     @IBOutlet var noteLabel: UITextView!
+    @IBOutlet var categoryField: UITextField!
 
-    public var noteTitle: String = ""
+    public var date: String = ""
     public var note: String = ""
+    public var noteCategory: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLabel.text = noteTitle
+        
+        self.noteLabel.layer.borderColor = UIColor.lightGray.cgColor
+        self.noteLabel.layer.borderWidth = 1
+        
+        dateLabel.text = date
         noteLabel.text = note
+        categoryField.text = noteCategory
+        
 
     }
     
