@@ -12,8 +12,9 @@ class EntryViewController: UIViewController {
     
     @IBOutlet var titleField: UITextField!
     @IBOutlet var noteField: UITextView!
+    @IBOutlet var categoryField: UITextField!
 
-    public var completion: ((String, String) -> Void)?
+    public var completion: ((String, String, String) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,7 @@ class EntryViewController: UIViewController {
     
     @objc func didTapSave(){
         if let text = titleField.text, !text.isEmpty, !noteField.text.isEmpty{
-            completion?(text, noteField.text)
+            completion?(text, categoryField.text!, noteField.text)
         }
     }
 

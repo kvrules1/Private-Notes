@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import DropDown
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -16,16 +17,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet var label: UILabel!
     @IBOutlet weak var editButton: UIBarButtonItem!
     
-    var models: [(title: String, note: String, date: Date)] = []
-
+    //var models: [(title: String, note: String, date: Date)] = []
     
+    var user: User!
+    var notes = [Note]()
+    var ref: DatabaseReference!
+    private var databaseHandle: DatabaseHandle!
+    
+    
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         table.delegate = self
         table.dataSource = self
         title = "Notes"
         
+        user = Auth.auth().currentUser
+        ref = Database.database().reference()
+        startObservingDatabase()
+        
     }
+    
     
     @IBAction func didTapNewNote(){
         guard let vc = storyboard?.instantiateViewController(identifier: "new") as? EntryViewController else{
@@ -33,9 +46,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         vc.title = "New Note"
         vc.navigationItem.largeTitleDisplayMode = .never
-        vc.completion = { noteTitle, note in
+        vc.completion = { noteTitle, category, note in
             self.navigationController?.popToRootViewController(animated: true)
-            self.models.append((title: noteTitle, note: note, date: Date()))
+            //self.notes.append((title: noteTitle, note: note, date: Date()))
+            
+            let randomID = Database.database().reference().child("users").child(self.user.uid).child("notes").childByAutoId()
+            
+            self.ref.child("users").child(self.user.uid).child("notes").child(randomID.key!).child("title").setValue(noteTitle)
+            
+            self.ref.child("users").child(self.user.uid).child("notes").child(randomID.key!).child("note").setValue(note)
+            
+            let format = DateFormatter()
+            format.dateStyle = .full
+            format.timeStyle = .full
+            let now = Date()
+            
+            self.ref.child("users").child(self.user.uid).child("notes").child(randomID.key!).child("date").setValue(format.string(from: now))
+            
+            self.ref.child("users").child(self.user.uid).child("notes").child(randomID.key!).child("category").setValue(category)
+        
+            
             self.label.isHidden = true
             self.table.isHidden = false
             
@@ -57,16 +87,31 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    func startObservingDatabase(){
+        databaseHandle = ref.child("users/\(self.user.uid)/notes").observe(.value, with: {(snapshot) in
+            var newNotes = [Note]()
+            
+            for noteSnapshot in snapshot.children{
+                let note = Note(snapshot: noteSnapshot as! DataSnapshot)
+                newNotes.append(note!)
+            }
+            
+            self.notes = newNotes
+            self.table.reloadData()
+            
+        })
+    }
+    
     // Table Functions
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return models.count
+        return notes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = models[indexPath.row].title
-        cell.detailTextLabel?.text = models[indexPath.row].note
+        cell.textLabel?.text = notes[indexPath.row].title
+        cell.detailTextLabel?.text = notes[indexPath.row].note
         return cell
     }
     // Allows for reorder
@@ -77,20 +122,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath)
     {
-        let item = models[sourceIndexPath.row]
-        models.remove(at: sourceIndexPath.row)
-        models.insert(item, at: destinationIndexPath.row)
+        let item = notes[sourceIndexPath.row]
+        notes.remove(at: sourceIndexPath.row)
+        notes.insert(item, at: destinationIndexPath.row)
     }
     
     @IBAction func sortAlpha(_ sender: Any)
     {
-        self.models.sort { $0.title < $1.title }
+        self.notes.sort { $0.title! < $1.title! }
         self.table.reloadData()
     }
     
     @IBAction func sortDate(_ sender: Any)
     {
-        self.models.sort { $0.date < $1.date }
+        self.notes.sort { $0.date < $1.date }
         self.table.reloadData()
     }
     
@@ -101,7 +146,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete{
-            models.remove(at: indexPath.row)
+            notes.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         }
     }
@@ -109,7 +154,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let model = models[indexPath.row]
+        let model = notes[indexPath.row]
         
         // Show note controller
         

@@ -9,4 +9,6 @@ target 'Private Notes' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Core'
+  pod 'DropDown'
+  pod 'Firebase/Database'
 end

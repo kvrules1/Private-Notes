@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bep-dp-2yc">
-                                <rect key="frame" x="0.0" y="96" width="414" height="640"/>
+                                <rect key="frame" x="0.0" y="96" width="414" height="591"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="0FY-MX-QUj" detailTextLabel="LZ7-5T-2LU" style="IBUITableViewCellStyleSubtitle" id="OaZ-9w-bBS">
@@ -57,14 +57,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="bep-dp-2yc" secondAttribute="bottom" id="8T9-8x-ia7"/>
-                            <constraint firstItem="bep-dp-2yc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AB4-hT-5H3"/>
-                            <constraint firstItem="RlC-OV-RnY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XxK-H0-Kg0"/>
-                            <constraint firstItem="bep-dp-2yc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bzA-NA-Rn9"/>
-                            <constraint firstItem="RlC-OV-RnY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lHd-n1-1ZS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bep-dp-2yc" secondAttribute="trailing" id="ucv-aM-OL7"/>
+                            <constraint firstItem="RlC-OV-RnY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="261.66666666666669" id="Glk-zw-p7b"/>
+                            <constraint firstItem="bep-dp-2yc" firstAttribute="centerX" secondItem="RlC-OV-RnY" secondAttribute="centerX" id="VTC-kH-S4z"/>
+                            <constraint firstItem="bep-dp-2yc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YxC-72-HoU"/>
+                            <constraint firstItem="bep-dp-2yc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bMp-uI-SFA"/>
+                            <constraint firstItem="RlC-OV-RnY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gfA-FR-ZOg"/>
+                            <constraint firstItem="bep-dp-2yc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hB6-LP-Om3"/>
+                            <constraint firstItem="bep-dp-2yc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jc9-Rr-IF1"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Notes" id="1Cg-gt-S2d">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="5Ea-gA-j4x">
@@ -74,7 +76,7 @@
                             </barButtonItem>
                             <barButtonItem style="plain" id="iBw-rn-NWk">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="N8s-Ul-16V">
-                                    <rect key="frame" x="294" y="7" width="89" height="30"/>
+                                    <rect key="frame" x="293.33333333333337" y="7" width="60" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Sign Out"/>
                                     <connections>
@@ -84,7 +86,7 @@
                             </barButtonItem>
                             <barButtonItem style="plain" id="L7N-4t-bSG">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="AQx-E4-giu">
-                                    <rect key="frame" x="202" y="7" width="92" height="30"/>
+                                    <rect key="frame" x="255.33333333333334" y="7" width="30.000000000000028" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Edit"/>
                                     <connections>
@@ -92,18 +94,29 @@
                                     </connections>
                                 </button>
                             </barButtonItem>
-                            <barButtonItem title="Sort" style="plain" id="c4H-V3-hHE">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Z4C-wp-Otl">
-                                    <rect key="frame" x="18" y="7" width="92" height="30"/>
+                            <barButtonItem style="plain" id="mql-RE-0ta">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="I7w-gM-5YM">
+                                    <rect key="frame" x="155.33333333333334" y="7" width="92" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Sort"/>
+                                    <state key="normal" title="Date"/>
                                     <connections>
-                                        <action selector="sortAlpha:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QpF-ls-kCU"/>
+                                        <action selector="sortDate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YaP-9N-2UT"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="NvY-dc-5zm">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="4q1-44-PM7">
+                                    <rect key="frame" x="55.333333333333343" y="7" width="92" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Title"/>
+                                    <connections>
+                                        <action selector="sortAlpha:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MMb-Qt-0oo"/>
                                     </connections>
                                 </button>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="editButton" destination="L7N-4t-bSG" id="Sjq-qy-6WT"/>
                         <outlet property="label" destination="RlC-OV-RnY" id="UMr-8N-uM5"/>
@@ -131,8 +144,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Category (Grocery, Important Info, Passwords, Todo List)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pDS-Gu-RCm">
+                                <rect key="frame" x="10" y="70" width="394" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eQH-Sl-miN">
-                                <rect key="frame" x="-120" y="210" width="394" height="654"/>
+                                <rect key="frame" x="10" y="112" width="394" height="604"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -152,6 +171,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="categoryField" destination="pDS-Gu-RCm" id="AQz-F6-6yf"/>
                         <outlet property="noteField" destination="eQH-Sl-miN" id="xIp-6G-GLm"/>
                         <outlet property="titleField" destination="J9a-k4-JRt" id="HKN-SS-4iK"/>
                     </connections>

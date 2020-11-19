@@ -11,7 +11,7 @@
 		A8574E1B25210D8B001ED082 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8574E1825210D8B001ED082 /* LoginViewController.swift */; };
 		A8574E1C25210D8B001ED082 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8574E1925210D8B001ED082 /* ResetPasswordViewController.swift */; };
 		A8574E1D25210D8B001ED082 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8574E1A25210D8B001ED082 /* SignUpViewController.swift */; };
-		A85C83182556222000A41762 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A85C83162556222000A41762 /* Model.xcdatamodeld */; };
+		A88CD2DC2565DC6300F54486 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88CD2DB2565DC6300F54486 /* Note.swift */; };
 		A8DEDFC2251BC2AC00AB5572 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DEDFC1251BC2AC00AB5572 /* AppDelegate.swift */; };
 		A8DEDFC4251BC2AC00AB5572 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DEDFC3251BC2AC00AB5572 /* SceneDelegate.swift */; };
 		A8DEDFC6251BC2AC00AB5572 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DEDFC5251BC2AC00AB5572 /* ViewController.swift */; };
@@ -29,7 +29,7 @@
 		A8574E1825210D8B001ED082 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "/Users/kv/Desktop/Private Notes/Private Notes/LoginViewController.swift"; sourceTree = "<absolute>"; };
 		A8574E1925210D8B001ED082 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		A8574E1A25210D8B001ED082 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		A85C83172556222000A41762 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		A88CD2DB2565DC6300F54486 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		A8DEDFBE251BC2AC00AB5572 /* Private Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Private Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8DEDFC1251BC2AC00AB5572 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8DEDFC3251BC2AC00AB5572 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,8 +114,8 @@
 				A8DEDFD7251BC55300AB5572 /* EntryViewController.swift */,
 				A8574E1825210D8B001ED082 /* LoginViewController.swift */,
 				A8574E1925210D8B001ED082 /* ResetPasswordViewController.swift */,
-				A85C83162556222000A41762 /* Model.xcdatamodeld */,
 				A8574E1A25210D8B001ED082 /* SignUpViewController.swift */,
+				A88CD2DB2565DC6300F54486 /* Note.swift */,
 			);
 			path = "Private Notes";
 			sourceTree = "<group>";
@@ -241,7 +241,7 @@
 				A8574E1D25210D8B001ED082 /* SignUpViewController.swift in Sources */,
 				A8DEDFD8251BC55300AB5572 /* EntryViewController.swift in Sources */,
 				A8DEDFC6251BC2AC00AB5572 /* ViewController.swift in Sources */,
-				A85C83182556222000A41762 /* Model.xcdatamodeld in Sources */,
+				A88CD2DC2565DC6300F54486 /* Note.swift in Sources */,
 				A8DEDFC2251BC2AC00AB5572 /* AppDelegate.swift in Sources */,
 				A8DEDFC4251BC2AC00AB5572 /* SceneDelegate.swift in Sources */,
 				A8574E1C25210D8B001ED082 /* ResetPasswordViewController.swift in Sources */,
@@ -446,19 +446,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		A85C83162556222000A41762 /* Model.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A85C83172556222000A41762 /* Model.xcdatamodel */,
-			);
-			currentVersion = A85C83172556222000A41762 /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = A8DEDFB6251BC2AC00AB5572 /* Project object */;
 }
