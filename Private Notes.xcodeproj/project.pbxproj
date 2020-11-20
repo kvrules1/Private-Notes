@@ -11,6 +11,7 @@
 		A8574E1B25210D8B001ED082 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8574E1825210D8B001ED082 /* LoginViewController.swift */; };
 		A8574E1C25210D8B001ED082 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8574E1925210D8B001ED082 /* ResetPasswordViewController.swift */; };
 		A8574E1D25210D8B001ED082 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8574E1A25210D8B001ED082 /* SignUpViewController.swift */; };
+		A8613BDA256878D00087C9DC /* PN.png in Resources */ = {isa = PBXBuildFile; fileRef = A8613BD9256878D00087C9DC /* PN.png */; };
 		A88CD2DC2565DC6300F54486 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88CD2DB2565DC6300F54486 /* Note.swift */; };
 		A8DEDFC2251BC2AC00AB5572 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DEDFC1251BC2AC00AB5572 /* AppDelegate.swift */; };
 		A8DEDFC4251BC2AC00AB5572 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DEDFC3251BC2AC00AB5572 /* SceneDelegate.swift */; };
@@ -29,6 +30,7 @@
 		A8574E1825210D8B001ED082 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "/Users/kv/Desktop/Private Notes/Private Notes/LoginViewController.swift"; sourceTree = "<absolute>"; };
 		A8574E1925210D8B001ED082 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		A8574E1A25210D8B001ED082 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		A8613BD9256878D00087C9DC /* PN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PN.png; path = ../../PN.png; sourceTree = "<group>"; };
 		A88CD2DB2565DC6300F54486 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		A8DEDFBE251BC2AC00AB5572 /* Private Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Private Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8DEDFC1251BC2AC00AB5572 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				A8DEDFCA251BC2AD00AB5572 /* Assets.xcassets */,
 				A8574DB1251D02CF001ED082 /* GoogleService-Info.plist */,
 				A8DEDFCF251BC2AD00AB5572 /* Info.plist */,
+				A8613BD9256878D00087C9DC /* PN.png */,
 				A8DEDFD5251BC53100AB5572 /* NoteViewController.swift */,
 				A8DEDFD7251BC55300AB5572 /* EntryViewController.swift */,
 				A8574E1825210D8B001ED082 /* LoginViewController.swift */,
@@ -180,6 +183,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8613BDA256878D00087C9DC /* PN.png in Resources */,
 				A8DEDFCE251BC2AD00AB5572 /* LaunchScreen.storyboard in Resources */,
 				A8574DB2251D02CF001ED082 /* GoogleService-Info.plist in Resources */,
 				A8DEDFCB251BC2AD00AB5572 /* Assets.xcassets in Resources */,
