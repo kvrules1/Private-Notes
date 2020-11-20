@@ -18,6 +18,8 @@ class NoteViewController: UIViewController {
     public var note: String = ""
     public var noteCategory: String = ""
     
+    public var completion:((String, String)->Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,8 +30,12 @@ class NoteViewController: UIViewController {
         noteLabel.text = note
         categoryField.text = noteCategory
         
-
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(didTapSave))
     }
     
-
+    @objc func didTapSave(){
+        if let text = noteLabel.text, !text.isEmpty, !categoryField.text!.isEmpty{
+            completion?(text, categoryField.text!)
+        }
+    }
 }

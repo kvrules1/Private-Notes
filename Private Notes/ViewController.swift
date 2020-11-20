@@ -9,15 +9,12 @@
 import UIKit
 import Firebase
 import FirebaseAuth
-import DropDown
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var table: UITableView!
     @IBOutlet var label: UILabel!
     @IBOutlet weak var editButton: UIBarButtonItem!
-    
-    //var models: [(title: String, note: String, date: Date)] = []
     
     var user: User!
     var notes = [Note]()
@@ -51,22 +48,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         vc.navigationItem.largeTitleDisplayMode = .never
         vc.completion = { noteTitle, category, note in
             self.navigationController?.popToRootViewController(animated: true)
-            //self.notes.append((title: noteTitle, note: note, date: Date()))
             
-            let randomID = Database.database().reference().child("users").child(self.user.uid).child("notes").childByAutoId()
+            let key = Database.database().reference().child("users").child(self.user.uid).child("notes").childByAutoId().key
             
-            self.ref.child("users").child(self.user.uid).child("notes").child(randomID.key!).child("title").setValue(noteTitle)
+            self.ref.child("users").child(self.user.uid).child("notes").child(key!).child("title").setValue(noteTitle)
             
-            self.ref.child("users").child(self.user.uid).child("notes").child(randomID.key!).child("note").setValue(note)
+            self.ref.child("users").child(self.user.uid).child("notes").child(key!).child("note").setValue(note)
             
             let format = DateFormatter()
-            format.dateStyle = .full
-            format.timeStyle = .full
+            format.dateStyle = .short
+            format.timeStyle = .long
             let now = Date()
             
-            self.ref.child("users").child(self.user.uid).child("notes").child(randomID.key!).child("date").setValue(format.string(from: now))
+            self.ref.child("users").child(self.user.uid).child("notes").child(key!).child("date").setValue(format.string(from: now))
             
-            self.ref.child("users").child(self.user.uid).child("notes").child(randomID.key!).child("category").setValue(category)
+            self.ref.child("users").child(self.user.uid).child("notes").child(key!).child("category").setValue(category)
         
             
             self.label.isHidden = true
@@ -81,8 +77,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if Auth.auth().currentUser != nil {
             do {
                 try Auth.auth().signOut()
-                //let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Login")
-                //present(vc, animated: true, completion: nil)
                 self.performSegue(withIdentifier: "Logout", sender: nil)
             } catch let error as NSError {
                 print(error.localizedDescription)
@@ -138,23 +132,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBAction func sortDate(_ sender: Any)
     {
-        self.notes.sort { $0.date < $1.date }
+        self.notes.sort { $0.date.compare($1.date) == .orderedDescending }
         self.table.reloadData()
     }
     
     @IBAction func sortCategory(_ sender: Any)
     {
-        self.notes.sort { $0.category < $1.category }
+        self.notes.sort { $1.category < $0.category }
         self.table.reloadData()
-    }
-    
-    @IBAction func edit(_ sender: Any)
-    {
-        table.isEditing = !table.isEditing
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete{
+            let note = notes[indexPath.row]
+            note.ref?.removeValue()
             notes.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         }
@@ -175,6 +166,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         vc.date = model.date
         vc.note = model.note
         vc.noteCategory = model.category
+       // navigationController?.pushViewController(vc, animated: true)
+        
+        vc.completion = {note, category in
+            
+            self.navigationController?.popToRootViewController(animated: true)
+
+           
+            self.ref.child("users").child(self.user.uid).child("notes").child(model.ref.key!).child("category").setValue(category)
+            self.ref.child("users").child(self.user.uid).child("notes").child(model.ref.key!).child("note").setValue(note)
+            
+            self.table.reloadData()
+            
+        }
         navigationController?.pushViewController(vc, animated: true)
     }
     
