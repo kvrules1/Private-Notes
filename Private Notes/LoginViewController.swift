@@ -17,7 +17,13 @@ class LoginViewController: UIViewController {
 @IBOutlet weak var emailTextField: UITextField!
 @IBOutlet weak var passwordTextField: UITextField!
 
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        
+        view.addGestureRecognizer(tap)
+    }
+    
     //Login Action
     @IBAction func loginAction(_ sender: AnyObject) {
         if self.emailTextField.text == "" || self.passwordTextField.text == "" {
@@ -27,7 +33,7 @@ class LoginViewController: UIViewController {
                 let alertController = UIAlertController(title: "Error", message: "Please enter an email and password.", preferredStyle: .alert)
                 
                 let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                alertController.addAction(defaultAction)
+                alertController.addAction(defaultAction)            
                 
                 self.present(alertController, animated: true, completion: nil)
             
