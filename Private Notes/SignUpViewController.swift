@@ -10,14 +10,17 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
+// This class is for creating an account.
 class SignUpViewController: UIViewController {
 
-    //Outlets
+    // Variables for the text fields
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    //Sign Up Action for email
+    // Function for creating an account
     @IBAction func createAccountAction(_ sender: AnyObject) {
+        
+        // Checks to make sure correct data was inputted into the email and password fields.
         if emailTextField.text == "" {
                 let alertController = UIAlertController(title: "Error", message: "Please enter your email and password", preferredStyle: .alert)
                 
@@ -25,13 +28,13 @@ class SignUpViewController: UIViewController {
                 alertController.addAction(defaultAction)
                 
                 present(alertController, animated: true, completion: nil)
-            
             }
         else {
+            
+            // Creates the user with the inputted info
             Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
                 
                 if error == nil {
-                    print("You have successfully signed up")
                         
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
                     self.present(vc!, animated: true, completion: nil)

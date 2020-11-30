@@ -9,15 +9,16 @@
 import UIKit
 import Firebase
 
-
+// This class is for reseting a users password.
 class ResetPasswordViewController: UIViewController {
     
-    // Outlets
+    // Email text field
     @IBOutlet weak var emailTextField: UITextField!
 
-    // Reset Password Action
+    // Function for reseting password
     @IBAction func submitAction(_ sender: AnyObject) {
         
+        // Checks if the email is valid and if it is not it presents an error
         if self.emailTextField.text == "" {
             let alertController = UIAlertController(title: "Oops!", message: "Please enter an email.", preferredStyle: .alert)
             
@@ -26,7 +27,10 @@ class ResetPasswordViewController: UIViewController {
             
             present(alertController, animated: true, completion: nil)
         
-        } else {
+        }
+        else {
+           
+            // When the email is valid a reset link is sent to the email.
             Auth.auth().sendPasswordReset(withEmail: self.emailTextField.text!, completion: { (error) in
                 
                 var title = ""
@@ -35,7 +39,8 @@ class ResetPasswordViewController: UIViewController {
                 if error != nil {
                     title = "Error!"
                     message = (error?.localizedDescription)!
-                } else {
+                }
+                else {
                     title = "Success!"
                     message = "Password reset email sent."
                     self.emailTextField.text = ""
