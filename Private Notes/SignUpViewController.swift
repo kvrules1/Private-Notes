@@ -1,9 +1,9 @@
 //
 //  SignUpViewController.swift
-//  FirebaseTutorial
+//  Private Notes
 //
-//  Created by James Dacombe on 16/11/2016.
-//  Copyright © 2016 AppCoda. All rights reserved.
+//  Created by KV on 9/23/20.
+//  Copyright © 2020 Kenneth McDonald. All rights reserved.
 //
 
 import UIKit
